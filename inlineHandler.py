@@ -38,7 +38,7 @@ class InlineHandler(InlineUserHandler, AnswererMixin):
 
     def on_chosen_inline_result(self, msg):
         result_id, from_id, query_string = glance(msg, flavor='chosen_inline_result')
-        s = f"{msg['from']['first_name']}: Chosen Inline Result: {result_id} {from_id} {query_string}"
+        s = f"Chosen Inline Result: {result_id} {from_id} {query_string}"
         logger.info(s)
 
     def on_close(self, ex):
